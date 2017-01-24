@@ -31,17 +31,16 @@
 
 (defn fast-expt [b n]
   (cond (= n 0)
-          1
+        1
 
         (even? n)
-          (square (fast-expt b (/ n 2)))
+        (square (fast-expt b (/ n 2)))
 
         :else
-          (* b (fast-expt b (dec n)))))
+        (* b (fast-expt b (dec n)))))
 
 (fast-expt 2 4) ; 16
 (fast-expt 3 3) ; 27
 (fast-expt 6 3) ; 216
 (fast-expt 2 5) ; 32
 (fast-expt 100 2) ; 10000
-
